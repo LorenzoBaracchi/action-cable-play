@@ -10,5 +10,15 @@
   <%= @room.description %>
 </p>
 
+
+<h2>Messages</h2>
+<div class="messages">
+  <%= render @room.messages %>
+</div>
+
+<%= render 'messages/new', post: @room %>
+
+
+
 <%= link_to 'Edit', edit_room_path(@room) %> |
 <%= link_to 'Back', rooms_path %>
