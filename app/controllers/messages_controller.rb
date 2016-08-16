@@ -2,7 +2,8 @@ class MessagesController < ApplicationController
   before_action :set_room
 
   def create
-    @room.messages.create! messages_params
+    message = @room.messages.create! messages_params
+    MessagesChannel.broadcast(message)
     redirect_to @room
   end
 
