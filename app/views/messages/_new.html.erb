@@ -1,5 +1,5 @@
 <%= form_for([@room, Message.new], remote: true) do |f| %>
-  <%= f.text_field :user %> <br>
+  <%= f.hidden_field :user, value: current_user %> <br>
   <%= f.text_area :body %> <br>
   <%= f.submit %>
 <% end %>
