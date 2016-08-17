@@ -11,8 +11,15 @@
   </head>
 
   <body>
-    <header><%= "Hello #{current_user}" %></header>
+    <header>
+      <article>
+        <h1>Awesome ChatRoom</h1>
+      </article>
+      <aside>Hello <strong><%= "#{current_user}" %></strong></aside>
+    </header>
 
-    <%= yield %>
+    <div class="document">
+      <%= yield %>
+    </div>
   </body>
 </html>

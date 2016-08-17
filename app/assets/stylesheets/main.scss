@@ -1,0 +1,29 @@
+header {
+  width: 100%;
+  padding: 20px;
+  padding-bottom: 30px;
+  margin: 0;
+  background-color: #33ff77;
+  color: #fff;
+
+  article {
+    width: 70%;
+    float: left;
+  }
+  aside {
+    width: 30%;
+    float: right;
+    font-size: 18px;
+  }
+
+  h1 {
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+  }
+}
+
+.document {
+  clear: both;
+  margin: 5px 25px;
+}
