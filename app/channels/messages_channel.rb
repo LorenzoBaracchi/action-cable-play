@@ -8,7 +8,9 @@ class MessagesChannel < ApplicationCable::Channel
   end
 
   def subscribed
-    stream_for Room.last
+    Rails.logger.info("####### SUBSCRIBED #{params}")
+    room = Room.find_by(id: params[:room])
+    stream_for room
   end
 
   def unsubscribed

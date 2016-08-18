@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<%= hidden_field_tag "room_id", @room.id, { :id => "room_id" } %>
+
 <p>
   <strong>Title:</strong>
   <%= @room.title %>
