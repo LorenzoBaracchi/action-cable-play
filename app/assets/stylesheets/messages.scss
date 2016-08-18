@@ -1,3 +1,21 @@
-// Place all the styles related to the messages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$message_width: 150px;
+$message_margin: 5px;
+
+.message {
+    width: $message_width;
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 5px 15px;
+    margin: $message_margin;
+    background-color: #FFF6E5;
+
+    p {
+      margin: 2px;
+      padding: 5px;
+    }
+
+    &.mine {
+      margin-left: $message_width + $message_margin + 30px;
+      background-color: #7ECEFD;
+    }
+}
