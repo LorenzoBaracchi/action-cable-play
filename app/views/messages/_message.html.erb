@@ -1,8 +1,10 @@
 <div class="<%= message_class(message.user) %>">
+  <div class="inline">
   <strong><%= message.user %></strong>
   <%= form_tag({:controller => 'users', :action => 'say_hi'}, :method => 'put', :remote => true) do %>
   <%= hidden_field_tag :user, message.user %>
   <%= submit_tag 'Say hi' %>
   <% end %>
+  </div>
   <p><%= message.body %></p>
 </div>

@@ -9,3 +9,4 @@ $(document).on 'ready page:load', -> # wait for page to load
     received: (data) ->
       # Called when there's incoming data on the websocket for this channel
       console.log(data)
+      $('.greetings').append "<p>" + data.message + "</p>"

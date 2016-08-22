@@ -18,6 +18,19 @@ $message_margin: 5px;
       margin-left: $message_width + $message_margin + 30px;
       background-color: #7ECEFD;
     }
+
+    .inline {
+      display: inline-block;
+
+      strong {
+        float: left;
+      }
+
+      form {
+        float: right;
+        margin-left: 5px;
+      }
+    }
 }
 
 .new_message {

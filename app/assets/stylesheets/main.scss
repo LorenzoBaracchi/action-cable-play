@@ -1,3 +1,9 @@
+body {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+}
+
 header {
   width: 100%;
   padding: 20px;
@@ -5,6 +11,7 @@ header {
   margin: 0;
   background-color: #3E454C;
   color: #f2f2f2;
+  flex: 1 100%;
 
   article {
     width: 70%;
@@ -23,7 +30,33 @@ header {
   }
 }
 
+footer {
+  background-color: #3E454C;
+  color: #f2f2f2;
+  padding: 10px;
+  flex: 1 100%;
+}
+
 .document {
-  clear: both;
-  margin: 5px 25px;
+  margin: 0;
+  margin-top: 5px;
+  padding: 5px;
+  width: 70%;
+  min-height: 80vh;
+  flex: 3 auto;
+}
+
+.greetings {
+  margin: 0;
+  width: 28%;
+  flex: 1 auto;
+  color: #f2f2f2;
+  background-color: #FF7F66;
+  padding-left: 5px;
+
+  p {
+    margin: 2px;
+    padding: 2px;
+    font-size: 12px;
+  }
 }
