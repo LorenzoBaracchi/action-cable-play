@@ -3,7 +3,7 @@ class UserChannel < ApplicationCable::Channel
 
   def subscribed
     Rails.logger.info "####### SUBSCRIBED #{params.inspect}"
-  stream_from "#{params[:user]}_channel"
+    stream_from "#{params[:user]}_channel"
   end
 
   def unsubscribed
