@@ -24,17 +24,17 @@ RSpec.describe RoomsController, type: :controller do
   # Room. As you add validations to Room, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    {title: 'A room title', description: 'A room description'}
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    {title: nil, description: 'A room description'}
   }
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
   # RoomsController. Be sure to keep this updated too.
-  let(:valid_session) { {} }
+  let(:valid_session) { {current_user: 'bobby'} }
 
   describe "GET #index" do
     it "assigns all rooms as @rooms" do
