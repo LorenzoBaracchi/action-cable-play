@@ -6,6 +6,7 @@ RSpec.describe "rooms/show", type: :view do
       :title => "Title",
       :description => "MyText"
     ))
+    allow(view).to receive(:current_user).and_return 'bobby'
   end
 
   it "renders attributes in <p>" do
@@ -13,4 +14,5 @@ RSpec.describe "rooms/show", type: :view do
     expect(rendered).to match(/Title/)
     expect(rendered).to match(/MyText/)
   end
+
 end

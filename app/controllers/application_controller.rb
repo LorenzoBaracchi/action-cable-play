@@ -14,7 +14,6 @@ class ApplicationController < ActionController::Base
     redirect_to login_path if current_user.nil?
   end
 
-  helper_method :current_user
   def current_user
     session[:current_user]
   end
