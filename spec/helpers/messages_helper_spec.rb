@@ -11,5 +11,14 @@ require 'rails_helper'
 #   end
 # end
 RSpec.describe MessagesHelper, type: :helper do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+  let(:current_user) { 'bobby' }
+
+  describe '.message_class' do
+    it 'should mark message for current user' do
+      expect(message_class('bobby')).to eq('message mine')
+      expect(message_class('bob')).to eq('message')
+    end
+  end
+  
 end

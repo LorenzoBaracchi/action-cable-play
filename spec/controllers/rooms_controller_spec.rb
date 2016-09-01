@@ -103,14 +103,15 @@ RSpec.describe RoomsController, type: :controller do
   describe "PUT #update" do
     context "with valid params" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        {title: 'A NEW room title', description: 'A NEW room description'}
       }
 
       it "updates the requested room" do
         room = Room.create! valid_attributes
         put :update, params: {id: room.to_param, room: new_attributes}, session: valid_session
         room.reload
-        skip("Add assertions for updated state")
+        expect(room.title).to eq(new_attributes[:title])
+        expect(room.description).to eq(new_attributes[:description])
       end
 
       it "assigns the requested room as @room" do
